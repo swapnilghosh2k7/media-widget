@@ -2,7 +2,6 @@
 
 A sleek, lightweight, system-wide desktop media controller and audio visualizer for Windows 10 & 11. Built with Electron and Windows SMTC (System Media Transport Controls).
 
-![MediaWidget Preview](https://via.placeholder.com/800x400?text=MediaWidget+Preview) *(Replace with a screenshot of your widget)*
 
 ---
 
