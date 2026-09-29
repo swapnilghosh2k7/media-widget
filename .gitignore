@@ -1,0 +1,14 @@
+# Dependencies
+node_modules/
+
+# Build outputs & installers
+dist/
+
+# Bundled binaries (since node.exe is ~90MB)
+bin/node.exe
+*.zip
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/

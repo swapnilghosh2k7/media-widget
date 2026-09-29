@@ -1,0 +1,48 @@
+{
+  "name": "media-widget",
+  "version": "1.0.0",
+  "description": "System-wide media visualizer widget",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "@coooookies/windows-smtc-monitor": "^1.0.0"
+  },
+  "devDependencies": {
+    "electron": "^28.0.0",
+    "electron-builder": "^24.13.3",
+    "electron-packager": "^17.1.2"
+  },
+  "build": {
+    "appId": "com.antigravity.mediawidget",
+    "productName": "MediaWidget",
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": [
+            "x64"
+          ]
+        }
+      ]
+    },
+    "nsis": {
+      "oneClick": true,
+      "allowToChangeInstallationDirectory": false,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "MediaWidget",
+      "runAfterFinish": true
+    },
+    "asar": true,
+    "asarUnpack": [
+      "src/media-server.js",
+      "node_modules/@coooookies/windows-smtc-monitor/**/*",
+      "node_modules/@coooookies/windows-smtc-monitor-win32-x64-msvc/**/*",
+      "bin/**/*"
+    ]
+  }
+}
